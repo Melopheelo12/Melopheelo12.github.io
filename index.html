@@ -307,6 +307,41 @@ pre.code{margin:0;background:var(--ink);border:1px solid var(--line);border-radi
 .next:hover .next-cover,.next:focus-visible .next-cover{clip-path:inset(0 0 0 0 round 14px);transform:translateY(-50%) rotate(0)}
 @media (hover:none){.next-cover{clip-path:inset(0 0 0 0 round 14px);transform:translateY(-50%)}}
 
+/* ---------- Démos Holberton ---------- */
+.algos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.algo{border:1px solid var(--line);background:var(--ink-2);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px;transition:border-color .3s,transform .45s var(--out)}
+.algo:hover{border-color:var(--t);transform:translateY(-3px)}
+.algo code{color:var(--t);font-size:12.5px}
+.algo b{font-family:var(--display);font-variation-settings:"wdth" 84;font-weight:720;font-size:1.25rem;line-height:1.1;text-transform:uppercase}
+.algo p{font-size:14px;color:var(--muted);line-height:1.5}
+.demo{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:24px;align-items:start;border:1px solid var(--line);background:var(--ink-2);border-radius:16px;padding:20px}
+@media (max-width:760px){.demo{grid-template-columns:minmax(0,1fr)}}
+.isle{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:3px;width:100%;max-width:360px}
+.isle button{appearance:none;aspect-ratio:1;border:0;border-radius:4px;background:var(--ink-3);background:color-mix(in srgb,var(--t) 10%,var(--ink));cursor:pointer;padding:0;min-width:0;transition:background .2s,transform .3s var(--out)}
+.isle button:hover{transform:scale(.88)}
+.isle button[aria-pressed="true"]{background:var(--t)}
+.isle-out{display:flex;flex-direction:column;gap:14px;min-width:0}
+.isle-n{display:flex;align-items:baseline;gap:12px}
+.isle-n b{font-family:var(--display);font-variation-settings:"wdth" 64;font-weight:800;font-size:4rem;line-height:1;color:var(--t);font-variant-numeric:tabular-nums;display:inline-block}
+.isle-n span{color:var(--muted);font-size:var(--fs-s);line-height:1.35}
+.demo-actions{display:flex;flex-wrap:wrap;gap:8px}
+.mini{appearance:none;font-family:var(--mono);font-size:13px;color:var(--paper);background:transparent;border:1px solid var(--line-2);border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.mini:hover{background:var(--t);border-color:var(--t);color:var(--ink)}
+.race{border:1px solid var(--line);background:var(--ink-2);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.lane-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:var(--mono);font-size:13px;margin-bottom:8px}
+.lane-h b{color:var(--t);font-weight:600;font-size:15px;font-variant-numeric:tabular-nums}
+.track{position:relative;height:94px;border-left:1px solid var(--line-2);background:repeating-linear-gradient(to right,transparent 0 calc(25% - 1px),var(--line) calc(25% - 1px) 25%)}
+.rbar{position:absolute;height:18px;border-radius:5px;transform-origin:left center;display:flex;align-items:center;padding-left:8px;font-family:var(--mono);font-size:11px;white-space:nowrap;overflow:hidden}
+.seq .rbar{background:var(--line-2);background:color-mix(in srgb,var(--t) 40%,var(--ink-3));color:var(--paper)}
+.par .rbar{background:var(--t);color:var(--ink)}
+.axis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.art .ants{stroke-dasharray:6 5;animation:ants 1.2s linear infinite}
+.art .grow{transform-box:fill-box;transform-origin:left center;animation:grow 4s var(--out) infinite}
+.art .hl{animation:hl 3.6s ease-in-out infinite}
+@keyframes ants{to{stroke-dashoffset:-22}}
+@keyframes grow{0%{transform:scaleX(0)}55%,100%{transform:scaleX(1)}}
+@keyframes hl{0%,100%{opacity:.12}40%,60%{opacity:.75}}
+
 /* ---------- Illustrations ---------- */
 .art{display:block;width:100%;height:100%}
 .art .dash{stroke-dasharray:4 96;stroke-width:3.2;animation:dash 2.8s linear infinite}
@@ -451,14 +486,14 @@ pre.code{margin:0;background:var(--ink);border:1px solid var(--line);border-radi
     </section>
 
     <section class="wrap sec" style="padding-top:0" aria-labelledby="h-more">
-      <div class="sh"><div><p class="eyebrow">Sur l’établi</p><h2 id="h-more" data-scramble>D’autres projets</h2></div><a class="more" href="#projets">Les 8 projets <span aria-hidden="true">→</span></a></div>
+      <div class="sh"><div><p class="eyebrow">Sur l’établi</p><h2 id="h-more" data-scramble>D’autres projets</h2></div><a class="more" href="#projets">Les 12 projets <span aria-hidden="true">→</span></a></div>
       <div class="grid-3" id="homeMore"></div>
     </section>
 
     <section class="wrap sec" style="padding-top:0" aria-labelledby="h-stats">
       <div class="sh"><div><p class="eyebrow">En chiffres</p><h2 id="h-stats" data-scramble>Quelques repères</h2></div></div>
       <div class="stats" data-r>
-        <div class="stat"><b data-count="8">8</b><span>projets présentés sur ce site</span></div>
+        <div class="stat"><b data-count="12">12</b><span>projets présentés sur ce site</span></div>
         <div class="stat"><b data-count="12">12</b><span>semaines sur SHIELD, en binôme</span></div>
         <div class="stat"><b data-count="20">20</b><span>règles de détection dans l’agent défenseur</span></div>
         <div class="stat"><b data-count="56">56</b><span>tests automatisés sur Actu Geek</span></div>
@@ -477,16 +512,17 @@ pre.code{margin:0;background:var(--ink);border:1px solid var(--line);border-radi
       <div class="vh">
         <p class="eyebrow">~/projets</p>
         <h1 class="vt" data-scramble>Projets</h1>
-        <p class="lead" data-r>Huit projets, de l’école à mes projets perso : sécurité, back-end, infra et web.</p>
+        <p class="lead" data-r>Douze projets, de l’école à mes projets perso : sécurité, back-end, infra et web.</p>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filtrer les projets" data-r>
         <button class="fbtn" type="button" data-filter="tout" aria-pressed="true">Tout</button>
+        <button class="fbtn" type="button" data-filter="holberton" aria-pressed="false">Holberton</button>
         <button class="fbtn" type="button" data-filter="securite" aria-pressed="false">Sécurité</button>
         <button class="fbtn" type="button" data-filter="backend" aria-pressed="false">Back-end</button>
         <button class="fbtn" type="button" data-filter="infra" aria-pressed="false">Infra</button>
         <button class="fbtn" type="button" data-filter="web" aria-pressed="false">Web</button>
         <button class="fbtn" type="button" data-filter="ia" aria-pressed="false">IA</button>
-        <span class="fcount" id="fcount" aria-live="polite">08 projets</span>
+        <span class="fcount" id="fcount" aria-live="polite">12 projets</span>
       </div>
       <div class="grid-2" id="grid"></div>
     </div>
@@ -652,6 +688,34 @@ const ART={
     const dots=`<circle cx="170" cy="86" r="6" fill="currentColor"/><circle cx="200" cy="74" r="6" fill="currentColor"/><circle cx="230" cy="86" r="6" fill="currentColor"/>`;
     return SVG(plate(214,'terraform',.18,'fl1')+plate(152,'ansible',.27,'fl2')+plate(90,'compose',.38,'fl3',dots));
   },
+  algo(){
+    const M=['000000000000','000111000000','001111110000','011111111000','001110111100','000111111100','000011110000','000001100000','000000000000'];
+    const cs=28,x0=32,y0=24;let g='',d='',per=0;
+    const L=(r,c)=>r>=0&&r<M.length&&c>=0&&c<12&&M[r][c]==='1';
+    for(let r=0;r<M.length;r++)for(let c=0;c<12;c++){const x=x0+c*cs,y=y0+r*cs,on=L(r,c);
+      g+=`<rect x="${x+2}" y="${y+2}" width="${cs-4}" height="${cs-4}" rx="4" fill="currentColor" fill-opacity="${on?.6:.08}"/>`;
+      if(on){if(!L(r-1,c)){d+=`M${x} ${y}h${cs}`;per++}if(!L(r+1,c)){d+=`M${x} ${y+cs}h${cs}`;per++}if(!L(r,c-1)){d+=`M${x} ${y}v${cs}`;per++}if(!L(r,c+1)){d+=`M${x+cs} ${y}v${cs}`;per++}}}
+    return SVG(`${g}<path class="ants" d="${d}" fill="none" style="stroke:var(--paper)" stroke-width="2.5" stroke-linecap="square"/><text x="368" y="286" text-anchor="end" class="svgmono" style="fill:var(--paper)">périmètre = ${per}</text>`);
+  },
+  websocket(){
+    const cx=200,cy=150;let sp='',cl='';
+    for(let k=0;k<6;k++){const a=Math.PI/3*k-Math.PI/2,x=cx+150*Math.cos(a),y=cy+104*Math.sin(a);
+      sp+=`<path d="M${cx} ${cy} L${x.toFixed(1)} ${y.toFixed(1)}" stroke-opacity=".2"/><path class="dash" pathLength="100" d="M${cx} ${cy} L${x.toFixed(1)} ${y.toFixed(1)}" style="animation-delay:${(-k*.12).toFixed(2)}s"/>`;
+      cl+=`<g class="fl${k%3+1}"><rect x="${(x-26).toFixed(1)}" y="${(y-17).toFixed(1)}" width="52" height="34" rx="8" style="fill:var(--ink-2)" stroke="currentColor"/><rect x="${(x-16).toFixed(1)}" y="${(y-6).toFixed(1)}" width="${k%2?24:32}" height="5" rx="2.5" fill="currentColor" fill-opacity=".7"/><rect x="${(x-16).toFixed(1)}" y="${(y+3).toFixed(1)}" width="18" height="4" rx="2" fill="currentColor" fill-opacity=".3"/></g>`}
+    return SVG(`<g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">${sp}</g>${cl}<circle class="pulse" cx="${cx}" cy="${cy}" r="30" fill="currentColor" fill-opacity=".25"/><circle cx="${cx}" cy="${cy}" r="26" fill="currentColor"/><text x="${cx}" y="${cy+4}" text-anchor="middle" class="svgmono" style="fill:var(--ink);font-weight:600">B:</text>`);
+  },
+  sql(){
+    const tbl=(x,y,name,n,hi)=>{let r='';for(let i=0;i<n;i++){const yy=y+30+i*24;r+=`<rect x="${x}" y="${yy}" width="140" height="24" fill="currentColor" fill-opacity="${i%2?.05:.1}"/>${hi.indexOf(i)>-1?`<rect class="hl" x="${x}" y="${yy}" width="140" height="24" fill="currentColor" style="animation-delay:${(-i*.3).toFixed(1)}s"/>`:''}<rect x="${x+10}" y="${yy+10}" width="20" height="5" rx="2.5" fill="currentColor" fill-opacity=".8"/><rect x="${x+40}" y="${yy+10}" width="${60+(i*17)%34}" height="5" rx="2.5" fill="currentColor" fill-opacity=".4"/>`}
+      return `<rect x="${x}" y="${y}" width="140" height="${30+n*24}" rx="10" style="fill:var(--ink-2)" stroke="currentColor"/><text x="${x+12}" y="${y+20}" class="svgmono" fill="currentColor">${name}</text>${r}`};
+    return SVG(`<g class="fl1">${tbl(34,52,'students',6,[1,4])}</g><g class="fl2">${tbl(226,86,'courses',5,[2])}</g><path class="dash" pathLength="100" d="M174 118 C 200 118, 200 164, 226 164" fill="none" stroke="currentColor" stroke-width="2.5"/><path class="dash" pathLength="100" d="M174 190 C 200 190, 200 164, 226 164" fill="none" stroke="currentColor" stroke-width="2.5" style="animation-delay:-1.4s"/><text x="200" y="40" text-anchor="middle" class="svgmono" style="fill:var(--paper)">INNER JOIN</text>`);
+  },
+  async(){
+    let g='';
+    for(let i=0;i<4;i++){const y=64+i*40;
+      g+=`<text x="34" y="${y+13}" class="svgmono" fill="currentColor">co${i+1}</text><rect x="74" y="${y}" width="250" height="18" rx="5" fill="currentColor" fill-opacity=".12"/><rect class="grow" x="74" y="${y}" width="250" height="18" rx="5" fill="currentColor" style="animation-delay:${(i*.08).toFixed(2)}s"/>`;
+      for(let t=1;t<10;t++)g+=`<rect x="${74+t*25-1}" y="${y}" width="2" height="18" style="fill:var(--ink)" fill-opacity=".45"/>`}
+    return SVG(`${g}<path d="M336 60 h10 v168 h-10" fill="none" style="stroke:var(--paper)" stroke-width="2"/><text x="354" y="140" class="svgmono" style="fill:var(--paper)">≈10 s</text><text x="74" y="252" class="svgmono" fill="currentColor" fill-opacity=".7">asyncio.gather(…)</text>`);
+  },
   homelab(){
     const win=(x,y,w,h,title,body)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" style="fill:var(--ink-2)" stroke="currentColor" stroke-opacity=".7"/><rect x="${x}" y="${y}" width="${w}" height="24" rx="10" fill="currentColor" fill-opacity=".16"/><circle cx="${x+14}" cy="${y+12}" r="3.5" fill="currentColor"/><circle cx="${x+26}" cy="${y+12}" r="3.5" fill="currentColor" fill-opacity=".5"/><circle cx="${x+38}" cy="${y+12}" r="3.5" fill="currentColor" fill-opacity=".25"/><text x="${x+w-12}" y="${y+16}" text-anchor="end" class="svgmono" fill="currentColor">${title}</text>${body}`;
     let a='';[[96,.6],[60,.35],[118,.5],[40,.35]].forEach(([wd,op],i)=>{const y=90+i*22;a+=`<text x="48" y="${y+4}" class="svgmono" fill="currentColor">$</text><rect x="62" y="${y-3}" width="${wd}" height="6" rx="3" fill="currentColor" fill-opacity="${op}"/>`});
@@ -735,8 +799,38 @@ const endingsHTML=`<ul class="endings">${[['Heureuse','#1F4A30','#9FF0B8'],['Tra
 const rncBrandHTML=`<div class="brand"><div class="brand-logos"><svg viewBox="0 0 108 108" role="img" aria-label="Logo RNC, version claire">${RNC_LIGHT}</svg><svg viewBox="0 0 108 108" role="img" aria-label="Logo RNC, version sombre">${RNC_DARK}</svg></div><ul class="swatches">${[['Paprika','#C8441A'],['Crème','#FFF8F1'],['Miel','#F2B53A'],['Moka','#2A1F1A'],['Paprika doux','#FF8A5C']].map(([n,c])=>`<li><i style="background:${c}"></i><span>${n}</span><code>${c}</code></li>`).join('')}</ul></div>`;
 const rncScreensHTML=`<div class="screens"><div><p class="sl">Côté elle · Android</p><ul class="chips">${['Accueil','Page resto','Fiche plat','Panier','Suivi','Comme d’hab','Je sais pas quoi manger'].map(s=>`<li>${s}</li>`).join('')}</ul></div><div><p class="sl">Côté moi · iPhone</p><ul class="chips"><li>Commandes reçues</li></ul></div></div>`;
 
+const snipHTML=(label,code)=>`<div class="snip"><small>${label}</small><pre class="code">${esc(code)}</pre></div>`;
+const ALGOS=[
+ ['Log Parsing','0-stats.py','Lit des logs HTTP sur l’entrée standard, valide chaque ligne champ par champ, cumule la taille et les codes de statut, et affiche les stats toutes les 10 lignes ou au Ctrl+C.'],
+ ['Lockboxes','0-lockboxes.py','Un parcours de graphe avec une pile : on ouvre la boîte 0, on récupère ses clés, et on vérifie que toutes les boîtes finissent ouvertes.'],
+ ['Prime Game','0-prime_game.py','Un crible d’Ératosthène et un comptage cumulé des nombres premiers, pour désigner le vainqueur de chaque manche entre Maria et Ben.'],
+ ['Minimum Operations','0-minoperations.py','Le nombre minimal de « copier tout » et « coller » pour obtenir n caractères : c’est la somme des facteurs premiers de n.'],
+ ['Island Perimeter','0-island_perimeter.py','Chaque case de terre ajoute 4 au périmètre, chaque voisine de terre en haut ou à gauche en retire 2.'],
+ ['Pascal’s Triangle','0-pascal_triangle.py','Chaque ligne se construit à partir de la précédente, en additionnant les paires de voisins.']
+];
+const algosHTML=`<div class="algos">${ALGOS.map(([n,f,d])=>`<div class="algo"><code>${f}</code><b>${n}</b><p>${d}</p></div>`).join('')}</div>`;
+const ISLE0=['000000000','001110000','011111100','001101110','000111100','000000000'];
+const islePerim=g=>{let p=0;for(let r=0;r<g.length;r++)for(let c=0;c<g[r].length;c++)if(g[r][c]){p+=4;if(r>0&&g[r-1][c])p-=2;if(c>0&&g[r][c-1])p-=2}return p};
+const isleHTML=`<div class="demo"><div class="isle" id="isle" role="group" aria-label="Grille de l’île : 9 colonnes, 6 lignes">${ISLE0.map((row,r)=>[...row].map((v,c)=>`<button type="button" data-row="${r}" data-col="${c}" aria-pressed="${v==='1'}" aria-label="Ligne ${r+1}, colonne ${c+1}"></button>`).join('')).join('')}</div>
+<div class="isle-out"><div class="isle-n"><b id="isleP">${islePerim(ISLE0.map(r=>[...r].map(Number)))}</b><span>de périmètre, calculé en direct avec le même algorithme que mon fichier Python</span></div>
+<div class="demo-actions"><button class="mini" type="button" data-isle="reset">Île de départ</button><button class="mini" type="button" data-isle="clear">Tout effacer</button></div>
+${snipHTML('Extrait de 0-island_perimeter.py',`for row in range(rows):
+    for col in range(cols):
+        if grid[row][col] == 1:
+            perimeter += 4
+            if row > 0 and grid[row - 1][col] == 1:
+                perimeter -= 2
+            if col > 0 and grid[row][col - 1] == 1:
+                perimeter -= 2`)}</div></div>`;
+const raceBars=seq=>[0,1,2,3].map(i=>`<div class="rbar" data-i="${i}" style="top:${i*24}px;left:${seq?i*25:0}%;width:25%">coroutine ${i+1}</div>`).join('');
+const raceHTML=`<div class="race" id="race">
+<div class="lane seq"><div class="lane-h"><span>Une coroutine après l’autre</span><b data-clock="seq">40 s</b></div><div class="track">${raceBars(true)}</div></div>
+<div class="lane par"><div class="lane-h"><span>asyncio.gather</span><b data-clock="par">10 s</b></div><div class="track">${raceBars(false)}</div></div>
+<div class="axis"><span>0 s</span><span>10 s</span><span>20 s</span><span>30 s</span><span>40 s</span></div>
+<div class="demo-actions"><button class="mini" type="button" data-race>Lancer la course</button></div></div>`;
+
 const P=[
-{id:'shield',title:'SHIELD',tint:'#FFB000',cats:['securite','backend'],kicker:'Projet de fin de formation',
+{id:'shield',title:'SHIELD',tint:'#FFB000',cats:['securite','backend','holberton'],kicker:'Projet de fin de formation',
  short:'Un honeypot complet, avec un agent défenseur qui note chaque attaque en temps réel.',
  tagline:'Un honeypot complet pour les amateurs : des leurres qui attirent les attaques, un agent défenseur qui note chacune d’elles en temps réel, et une sandbox pour s’entraîner en attaque comme en défense.',
  meta:[['Rôle','Back-end et sécurité'],['Équipe','En binôme avec Antho'],['Durée','12 semaines'],['Serveur','Hetzner Cloud']],
@@ -772,12 +866,92 @@ const P=[
   {h:'Le widget',html:widgetHTML},
   {h:'La démarche',p:['J’ai commencé par un cahier des charges et une architecture avant d’écrire la moindre ligne de code.']}
  ]},
-{id:'infra',title:'Trilogie infra',tint:'#9D8CFF',cats:['infra'],kicker:'Holberton · DevOps',
+{id:'infra',title:'Trilogie infra',tint:'#9D8CFF',cats:['infra','holberton'],kicker:'Holberton · DevOps',
  short:'Docker Compose, Ansible et Terraform : l’infrastructure décrite en code.',
  tagline:'Trois façons de décrire une infrastructure en code : des services avec Docker Compose, un serveur avec Ansible, des ressources avec Terraform.',
  meta:[['Contexte','Projets Holberton'],['Outils','Compose, Ansible, Terraform'],['Systèmes','Ubuntu 22.04 et conteneurs'],['Travail','En équipe et en solo']],
  stack:['Docker Compose','PostgreSQL','Ansible','Jinja2','nginx','Terraform','YAML','HCL'],
  sections:[{h:'Trois projets',html:infraHTML}]},
+{id:'algo',title:'Algorithmique',tint:'#FF8A3D',cats:['holberton','backend'],kicker:'Holberton · préparation aux entretiens',
+ short:'Six problèmes d’entretien résolus en Python, du parseur de logs au crible d’Ératosthène.',
+ tagline:'Les problèmes classiques des entretiens techniques, résolus en Python : graphes, nombres premiers, grilles et flux de données.',
+ meta:[['Contexte','Holberton · interview'],['Langage','Python 3'],['Problèmes','6 dans le dépôt'],['Style','pycodestyle']],
+ stack:['Python','Graphes','Crible d’Ératosthène','Facteurs premiers','Entrée standard'],
+ link:['Voir le dépôt','https://github.com/Melopheelo12/holbertonschool-interview'],
+ sections:[
+  {h:'Les problèmes',html:algosHTML},
+  {h:'Essayez : le périmètre d’une île',p:['Cliquez sur les cases pour ajouter ou retirer de la terre. Le périmètre se recalcule à chaque clic.'],html:isleHTML},
+  {h:'Le parseur de logs',p:['Le plus proche d’un vrai outil : il lit un flux de logs sans fin, ignore les lignes mal formées et garde ses statistiques à jour. Un Ctrl+C affiche le bilan au lieu de tout perdre.'],html:snipHTML('Extrait de 0-stats.py',`try:
+    for line in sys.stdin:
+        parts = line.strip().split()
+        if not is_valid_line(parts):
+            continue
+        line_count += 1
+        total_size += int(parts[-1])
+        status = int(parts[-2])
+        if status in status_codes:
+            status_codes[status] += 1
+        if line_count % 10 == 0:
+            print_stats(total_size, status_codes)
+except KeyboardInterrupt:
+    print_stats(total_size, status_codes)`)}
+ ]},
+{id:'websocket',title:'Serveurs WebSocket',tint:'#F7E36B',cats:['holberton','backend'],kicker:'Holberton · Python avancé',
+ short:'Du serveur écho au chat en direct : la communication temps réel en Python.',
+ tagline:'Plusieurs serveurs WebSocket en Python, du simple écho à la diffusion vers tous les clients, avec un client de chat dans le navigateur.',
+ meta:[['Contexte','Holberton · Python avancé'],['Bibliothèques','websockets, Starlette'],['Modèle','asyncio'],['Client','HTML, CSS, JavaScript']],
+ stack:['Python','asyncio','websockets','Starlette','ASGI','JavaScript'],
+ link:['Voir le dépôt','https://github.com/Melopheelo12/holbertonschool-core-engineering'],
+ sections:[
+  {h:'Cinq serveurs',pipe:[['Écho','renvoie chaque message'],['Unicast','répond au seul expéditeur'],['Broadcast','diffuse à tous les clients'],['Validation','OK ou ERR:EMPTY'],['ASGI','Starlette et route /ws']]},
+  {h:'La diffusion',p:['Le serveur garde l’ensemble des clients connectés. À chaque message reçu, il l’envoie à tous, et retire ceux dont la connexion s’est fermée en route.'],html:snipHTML('Extrait de broadcast_server.py',`async for message in websocket:
+    disconnected = set()
+    for client in connected_clients:
+        try:
+            await client.send(f"B:{message}")
+        except ConnectionClosed:
+            disconnected.add(client)
+    for client in disconnected:
+        connected_clients.remove(client)`)},
+  {h:'Les clients',list:['Une page de chat : une zone de messages, un champ de saisie, un bouton d’envoi.','Un script JavaScript qui ouvre la connexion et affiche son état : connecté, message reçu, déconnecté.','Un client Python asynchrone pour tester les serveurs depuis le terminal.','Le même principe fait tourner le tableau de bord en temps réel de SHIELD.']}
+ ]},
+{id:'sql',title:'SQL',tint:'#B6F0FF',cats:['holberton','backend'],kicker:'Holberton · données',
+ short:'48 requêtes : le stock d’une librairie, puis une école interrogée avec des jointures.',
+ tagline:'Deux séries de requêtes SQL : gérer le stock d’une librairie, puis interroger les étudiants, les cours et les enseignants d’une école.',
+ meta:[['Contexte','Holberton · data modeling'],['Moteur','SQLite'],['Requêtes','48 fichiers .sql'],['Thèmes','CRUD et jointures']],
+ stack:['SQL','SQLite','JOIN','GROUP BY','HAVING','Sous-requêtes'],
+ link:['Voir le dépôt','https://github.com/Melopheelo12/holbertonschool-data_modeling_and_persistence'],
+ sections:[
+  {h:'La librairie',p:['Une table de livres à créer, remplir et entretenir, en 33 requêtes.'],list:['CREATE TABLE avec clé primaire et colonnes obligatoires.','INSERT, puis SELECT filtrés avec WHERE, AND et OR.','UPDATE et DELETE ciblés, par identifiant ou par condition.','ORDER BY et LIMIT pour classer et limiter les résultats.','COUNT, SUM, AVG, MIN et MAX, puis GROUP BY par genre ou par auteur.']},
+  {h:'L’école',p:['15 requêtes qui croisent les étudiants, les cours, les inscriptions, les enseignants et les devoirs.'],list:['INNER JOIN, et LEFT JOIN pour garder par exemple les étudiants sans inscription.','Des comptages par cours avec GROUP BY.','Des filtres sur les groupes avec HAVING.','Des sous-requêtes pour comparer à une moyenne.']},
+  {h:'La requête la plus dense',p:['Les cours qui ont plus de devoirs que la moyenne : une jointure, un regroupement, et une moyenne calculée par deux sous-requêtes imbriquées.'],html:snipHTML('13-courses-above-average-assignments.sql',`SELECT courses.title AS course_title
+FROM courses
+INNER JOIN assignments ON assignments.course_id = courses.id
+GROUP BY courses.id, courses.title
+HAVING COUNT(assignments.id) > (
+    SELECT AVG(assignment_count)
+    FROM (
+        SELECT COUNT(id) AS assignment_count
+        FROM assignments
+        GROUP BY course_id
+    )
+)
+ORDER BY course_title ASC;`)}
+ ]},
+{id:'async',title:'Python asynchrone',tint:'#E89BFF',cats:['holberton','backend'],kicker:'Holberton · back-end',
+ short:'Coroutines, tâches et générateurs asynchrones, avec des annotations de type.',
+ tagline:'Attendre plusieurs choses en même temps sans bloquer : coroutines, tâches et générateurs asynchrones, le tout annoté avec le module typing.',
+ meta:[['Contexte','Holberton · web back-end'],['Modules','asyncio, typing'],['Projets','3 dans le dépôt'],['Python','3, annoté']],
+ stack:['Python','asyncio','typing','Coroutines','Générateurs asynchrones'],
+ link:['Voir le dépôt','https://github.com/Melopheelo12/holbertonschool-web_back_end'],
+ sections:[
+  {h:'Essayez : à la suite ou en parallèle',p:['Chaque coroutine lit un générateur asynchrone qui attend 1 seconde, 10 fois de suite. Lancées l’une après l’autre, quatre coroutines prennent 40 secondes. Avec asyncio.gather, elles attendent en même temps : environ 10 secondes. La course est accélérée.'],html:raceHTML},
+  {h:'Trois projets',list:['Annotations de type : listes, tuples, unions, itérables, et une fonction qui renvoie une fonction typée avec Callable.','Coroutines : wait_random, puis wait_n qui en lance n en parallèle avec asyncio.gather, et la même chose avec des asyncio.Task.','Générateurs et compréhensions asynchrones, et la mesure du temps d’exécution.']},
+  {h:'La mesure',html:snipHTML('Extrait de 2-measure_runtime.py',`async def measure_runtime() -> float:
+    start_time = time.time()
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
+    return time.time() - start_time`)}
+ ]},
 {id:'homelab',title:'Homelab offensif',tint:'#7BE04A',cats:['securite','infra'],kicker:'Projet perso · sécurité',
  short:'Kali Linux face à Metasploitable, pour pratiquer le pentest.',
  tagline:'Mon labo de pentest à la maison : une machine d’attaque Kali Linux face à une cible faite pour être attaquée, Metasploitable.',
@@ -824,20 +998,21 @@ const LAYERS=[
   ['Projet de fin de formation','SHIELD, en binôme pendant 12 semaines : honeypot, agent défenseur, sandbox d’attaque et de défense.','shield'],
   ['Spécialisation cybersécurité','Honeypots, homelab offensif avec Kali Linux et Metasploitable, analyse de trafic WebSocket avec une extension Chrome.','homelab'],
   ['Infrastructure as code','Docker Compose en équipe, Ansible pour configurer un serveur, Terraform pour décrire des ressources.','infra'],
-  ['Algorithmique et entretiens','Problème des N reines en backtracking, parseur de logs avec regex et gestion des signaux.'],
-  ['Données et SQL','Jointures, agrégations, sous-requêtes, GROUP BY et HAVING, normalisation.'],
-  ['Python asynchrone','Coroutines, asyncio.gather, tâches, mesure du temps d’exécution.'],
+  ['Python avancé : WebSockets','Serveurs écho, unicast, broadcast et validation, une app ASGI Starlette et un client de chat.','websocket'],
+  ['Algorithmique et entretiens','Problème des N reines en backtracking, parseur de logs, Lockboxes, Prime Game, périmètre d’île.','algo'],
+  ['Données et SQL','Jointures, agrégations, sous-requêtes, GROUP BY et HAVING, normalisation.','sql'],
+  ['Python asynchrone','Coroutines, asyncio.gather, tâches, annotations de type.','async'],
   ['Programmation orientée objet','Classes abstraites, héritage multiple et MRO, mixins, @property, duck typing.'],
   ['Fondations Python','Structures de données, fonctions, modules, fichiers, conventions pycodestyle.']
 ];
 
 const SKILLS=[
-  ['Langages',[['Python',['shield','sentinel','actu-geek']],['SQL',['shield']],['TypeScript',['shield','sentinel']],['JavaScript',['mille-vies','rnc']],['Bash',['shield']],['YAML',['infra','shield']],['HTML et CSS',['rnc','commerces','mille-vies']]]],
-  ['Back-end et données',[['FastAPI',['shield','sentinel']],['Pydantic',['shield']],['PostgreSQL',['shield','infra']],['Redis',['shield']],['WebSocket',['shield']],['API REST',['shield','sentinel']],['asyncio',[]]]],
+  ['Langages',[['Python',['shield','algo','async','websocket','actu-geek']],['SQL',['sql','shield']],['TypeScript',['shield','sentinel']],['JavaScript',['mille-vies','rnc']],['Bash',['shield']],['YAML',['infra','shield']],['HTML et CSS',['rnc','commerces','mille-vies']]]],
+  ['Back-end et données',[['FastAPI',['shield','sentinel']],['Pydantic',['shield']],['PostgreSQL',['shield','infra']],['Redis',['shield']],['WebSocket',['websocket','shield']],['API REST',['shield','sentinel']],['asyncio',['async','websocket']],['Starlette (ASGI)',['websocket']]]],
   ['Infra et DevOps',[['Docker Compose',['shield','infra']],['Ansible',['infra']],['Terraform',['infra']],['nginx',['shield','infra']],['GitHub Actions',['actu-geek']],['Hetzner Cloud',['shield']],['Netlify',['rnc','sentinel']],['Render',['sentinel']]]],
   ['Sécurité',[['Honeypots',['shield']],['Durcissement pare-feu',['shield']],['JWT',['shield']],['MITRE ATT&CK',['shield']],['Kali Linux',['homelab']],['Metasploitable',['homelab']]]],
   ['Front et produit',[['React',['shield','sentinel']],['PWA',['rnc']],['Canvas',['mille-vies']],['Scriptable (iOS)',['actu-geek']],['Maquettes',['commerces','rnc']]]],
-  ['Méthode',[['Git et Conventional Commits',['shield']],['Revue de pull requests',['shield']],['CI',['shield']],['ADR',['shield']],['Tests automatisés',['actu-geek']]]]
+  ['Méthode',[['Algorithmique',['algo']],['Git et Conventional Commits',['shield']],['Revue de pull requests',['shield']],['CI',['shield']],['ADR',['shield']],['Tests automatisés',['actu-geek']]]]
 ];
 
 /* ============ Rendu ============ */
@@ -1050,8 +1225,8 @@ function moveInd(){
 }
 function swap(id){
   const prev=current;
-  if(prev&&VIEWS[prev]){VIEWS[prev].hidden=true;pipesStop()}
-  VIEWS[id].hidden=false;current=id;document.body.dataset.view=id;
+  if(prev)pipesStop();
+  Object.keys(VIEWS).forEach(k=>{VIEWS[k].hidden=(k!==id)});current=id;document.body.dataset.view=id;
   window.scrollTo(0,0);navState(id);
   if(id==='accueil')MQ.rows.forEach(r=>{r.half=0});
 }
@@ -1258,7 +1433,7 @@ async function bootSeq(){
     const pre=$('#bootLog');let skip=false;
     const onSkip=()=>{skip=true};
     el.addEventListener('pointerdown',onSkip);addEventListener('keydown',onSkip,{once:true});
-    const lines=['RYAN-OS 26.11 · démarrage du portfolio','',dots('mémoire','ok'),dots('montage de ~/projets','8 trouvés'),dots('leurres ssh · http · ftp','en écoute'),dots('agent défenseur','20 règles'),dots('pipeline actu-geek','56 tests'),dots('playbooks ansible','idempotents'),'','> bienvenue.'];
+    const lines=['RYAN-OS 26.11 · démarrage du portfolio','',dots('mémoire','ok'),dots('montage de ~/projets','12 trouvés'),dots('leurres ssh · http · ftp','en écoute'),dots('agent défenseur','20 règles'),dots('pipeline actu-geek','56 tests'),dots('playbooks ansible','idempotents'),'','> bienvenue.'];
     let acc='';
     for(const line of lines){
       if(skip)break;
@@ -1272,6 +1447,33 @@ async function bootSeq(){
     await el.animate([{opacity:1},{opacity:0}],{duration:260,fill:'forwards'}).finished;
   }finally{clearTimeout(kill);el.remove()}
 }
+
+/* ============ Démos : île et course ============ */
+function isleUpdate(){
+  const box=$('#isle');if(!box)return;const g=[];
+  $$('button',box).forEach(b=>{const r=+b.dataset.row,c=+b.dataset.col;(g[r]=g[r]||[])[c]=b.getAttribute('aria-pressed')==='true'?1:0});
+  const el=$('#isleP');el.textContent=islePerim(g);
+  if(!REDUCED)el.animate([{transform:'scale(1.2)'},{transform:'scale(1)'}],{duration:350,easing:EO});
+}
+let raceRun=0;
+function raceStart(){
+  const box=$('#race');if(!box)return;const run=++raceRun,K=110;
+  const seq=$$('.seq .rbar',box),par=$$('.par .rbar',box),cs=$('[data-clock="seq"]',box),cp=$('[data-clock="par"]',box);
+  if(REDUCED){cs.textContent='40 s';cp.textContent='10 s';return}
+  const kf=[{transform:'scaleX(0)'},{transform:'scaleX(1)'}];
+  seq.forEach((b,i)=>b.animate(kf,{duration:10*K,delay:i*10*K,easing:'linear',fill:'backwards'}));
+  par.forEach(b=>b.animate(kf,{duration:10*K,easing:'linear',fill:'backwards'}));
+  const t0=performance.now();
+  const f=t=>{if(run!==raceRun)return;const e=(t-t0)/K;cs.textContent=Math.min(40,Math.floor(e))+' s';cp.textContent=Math.min(10,Math.floor(e))+' s';if(e<40.5)requestAnimationFrame(f)};
+  requestAnimationFrame(f);
+}
+document.addEventListener('click',e=>{
+  const cell=e.target.closest('#isle button');
+  if(cell){cell.setAttribute('aria-pressed',String(cell.getAttribute('aria-pressed')!=='true'));isleUpdate();return}
+  const ib=e.target.closest('[data-isle]');
+  if(ib){$$('#isle button').forEach(b=>{const on=ib.dataset.isle==='reset'&&ISLE0[+b.dataset.row][+b.dataset.col]==='1';b.setAttribute('aria-pressed',String(on))});isleUpdate();return}
+  if(e.target.closest('[data-race]'))raceStart();
+});
 
 /* ============ Lancement ============ */
 let net=null;
